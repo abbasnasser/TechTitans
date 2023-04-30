@@ -1,0 +1,339 @@
+body {
+  margin: 0px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.nav_bar {
+  /* position: fixed; */
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  color: #00477a;
+  top: 0px;
+  z-index: 3;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+
+.title {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+  position: relative;
+  left: 20%;
+  text-align: center;
+  padding-top: 11px;
+  height: 35px;
+  width: 160px;
+  bottom: 0px;
+  
+}
+
+.menu {
+  position: absolute;
+top: 68px;
+  right: 20%;
+}
+
+.test {
+  /* #00477a; */
+  color: black;
+position: relative;
+
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+
+
+  line-height: 5px;
+top: 0px;
+
+
+  height: 40px;
+  background-color: red;
+  animation: tester 2.5s steps(25, end), blink-caret 0.75s step-end infinite;
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  text-align: center;
+  max-width: 320px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@keyframes tester {
+  from {
+    width: 0;
+  }
+  to {
+    width: 340px;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+    border-width: 5px;
+    height: 40px;
+  }
+}
+.body_container{
+
+  background-color: transparent;
+  width: 100%;
+ height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+.img_intro{
+  background-color: transparent;
+  width: 100%;
+  height: 510px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.imageer{
+ width: 90%;
+ height: 500px;
+ background-color: transparent;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+}
+
+.photo{
+width: 95%;
+max-width: 600px;
+min-width: 400px;
+
+}
+
+.txt{
+
+
+  background-color: transparent;
+  width: 95%;
+  max-width: 600px;
+  min-width: 400px;
+  max-height: 300px;
+  min-height: 50px;
+ 
+  padding-bottom: 13%; /* 1:1 Aspect Ratio */
+ 
+}
+  
+ 
+
+ .data{
+  position: relative;
+ 
+  padding-top: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+ }
+ .data2{
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10px;
+  font-size:18 px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+
+ }
+
+
+
+
+
+
+@media only screen and (max-width: 300px) {
+  .title {
+    font-size: 14px;
+    margin-top: 19px;
+    left: 4%;
+    width: 110px;
+    padding-top: 16px;
+  }
+  .test{
+    left: 10%;
+    font-size: 14px;
+    max-width: 230px;
+   
+  }
+
+  .menu{
+    right: 4%;
+  }
+  .card {
+    flex: 60%;
+    width: 30%;
+  }
+  .photo{
+    min-width: 250px;
+
+  }
+  .txt{
+    min-width: 280px;
+  }
+
+}
+
+
+@media only screen and (min-width: 301px) {
+  .title {
+    font-size: 19px;
+    margin-top: 19px;
+    left: 10%;
+    width: 150px;
+  }
+  .test{
+    left: 10%;
+    font-size: 14px;
+    max-width: 230px;
+   
+  }
+
+  .menu{
+    right: 10%;
+  }
+  .card {
+    flex: 60%;
+    width: 30%;
+  }
+
+  .photo{
+    min-width: 250px;
+
+  }
+  .txt{
+    min-width: 280px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 601px) {
+  .title {
+    font-size: 20px;
+    padding-top: 11px;
+  height: 38px;
+  width: 180px;
+  left:20% ;
+  }
+  .test{
+    left: 20%;
+    font-size: 19px;
+    max-width: 310px;
+  }
+  .card {
+    flex: 40%;
+    width: 50%;
+    min-width: 450;
+    margin-top: -50px;
+  }
+  .menu{
+    right: 20%;
+      }
+  .container {
+    margin-top: 80px;
+  }
+
+  /* .imageer{
+    width: 30%;
+  }
+  .txt{
+    width: 60%;
+  } */
+}
+
+@media only screen and (min-width: 801px) {
+  .title {
+    font-size: 20px;
+    padding-top: 11px;
+  height: 38px;
+  width: 180px;
+  left: 20%;
+
+  }
+  .test{
+    left: 20%;
+    font-size: 19px;
+    max-width: 310px;
+  }
+  .menu{
+right: 20%;
+  }
+  .card {
+    min-width: 450;
+    flex: 30%;
+    width: 90%;
+    margin-top: -50px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .title {
+    font-size: 20px;
+    padding-top: 11px;
+  height: 38px;
+  width: 180px;
+  left: 20%;
+
+  }
+
+  .data{
+
+  
+      padding-top: 120px;
+      font-size: 24px;
+      padding-left: 10%;
+  
+    
+    
+ 
+  }
+  .data2{
+    font-size: 18px;
+    padding-left: 10%;
+  }
+  .imageer{
+    width: 30%;
+  }
+  .txt{
+    width: 60%;
+  }
+  .menu{
+    right: 20%;
+
+  }
+  .card {
+    min-width: 450;
+    flex: 30%;
+    width: 90%;
+    margin-top: -50px;
+  }
+}
