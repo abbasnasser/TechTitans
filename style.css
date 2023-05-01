@@ -3,44 +3,43 @@ html {
 }
 
 .nav_bar {
-  /* position: fixed; */
-  height: 100px;
+  height: 70px;
   width: 100%;
   background-color: transparent;
   color: #00477a;
-  top: 0px;
+  padding-top: 10px;
   z-index: 3;
-  margin-top: 0px;
-  padding-top: 50px;
 }
 
 .title {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: transparent;
   border-radius: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 29px;
   font-weight: 500;
-  position: relative;
-  left: 20%;
+  position: absolute;
+  left: 5%;
+  top: 0px;
   text-align: center;
-  padding-top: 11px;
-  height: 35px;
+
   width: 160px;
-  bottom: 0px;
 }
 
 .menu {
-  position: absolute;
-  top: 68px;
-  right: 20%;
+  position: relative;
+  top: 5px;
+  float: right;
+  margin-right: 5%;
 }
 .menues {
   position: absolute;
   background-color: black;
-  height: 200px;
+  height: 240px;
   width: 200px;
-  top: 120px;
-  right: 20%;
+  top: 70px;
+  right: 5%;
+
   z-index: 7;
   border-radius: 20px;
   margin-top: 10px;
@@ -48,57 +47,68 @@ html {
   border-color: black;
   text-align: center;
 }
-.menu_items{
-    color: white;
-    font-size: 20px;
+.menu_items {
+  color: white;
+  font-size: 20px;
 }
+
+.add_blur_effect_menu {
+  animation: blurer 0.1s;
+  filter: blur(1px);
+}
+
+@keyframes blurer {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
+
 @keyframes animatemenuin {
   from {
     opacity: 0;
   }
   to {
-    opacity: 1;
-  }
-}
-
-@keyframes animatemenuout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+    opacity: 10;
   }
 }
 
 .cont1 {
-  padding-top: -20px;
+  padding-top: 20px;
   width: 100%;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* height: 1000px; */
-  
 }
 
 .txtt {
   position: relative;
- 
+
   max-width: 380px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 19px;
   padding-left: 5%;
   padding-right: 5%;
- 
+  background-color: transparent;
 }
-.cont2_holder{
-    background-color: transparent;
-    margin-bottom: 100px;
-    margin-top: 100px;
+.softwareDev_define {
+  padding-top: 10px;
+  background-color: transparent;
+  max-width: 380px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
+
+  font-size: 19px;
 }
+
 .cont2 {
-  margin-top: 60px;
+  margin-top: 10px;
 
   width: 100%;
   background-color: transparent;
@@ -136,9 +146,10 @@ html {
   max-width: 380px;
   padding-left: 10%;
   padding-right: 10%;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
   font-weight: 900;
+  font-size: 19px;
 }
 .cont4 {
   width: 100%;
@@ -150,6 +161,8 @@ html {
 .lst {
   max-width: 380px;
   width: 90%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 19px;
 }
 
 .cont5 {
@@ -198,103 +211,94 @@ html {
   }
 }
 @media only screen and (min-width: 701px) {
-    
 }
 @media only screen and (min-width: 900px) {
-    .txtt{
-        padding-top: 200px;
-    }
-    
+  .txtt {
+    /* padding-top: 200px; */
+  }
 }
 
 @media only screen and (min-height: 500px) {
-    .cont1 {
-      height: 480px;
-    }
-    .txtt{
-      top: -90px;
-  }
-  
-  }
-
-
-
-@media only screen and (min-height: 601px) {
-    .cont1 {
-      height: 480px;
-    }
-    .txtt{
-      top: -20px;
-  }
-  
-  }
-
- 
-@media only screen and (min-height: 701px) {
   .cont1 {
-    height: 550px;
+    height: 480px;
   }
-  .txtt{
-    top: -20px;
+  .txtt {
+    /* top: -70px; */
+  }
 }
 
+@media only screen and (min-height: 601px) {
+  .cont1 {
+    height: 480px;
+  }
+  .txtt {
+    /* top: 10px; */
+  }
+}
+
+@media only screen and (min-height: 701px) {
+  .cont1 {
+    height: 480px;
+  }
+  .txtt {
+    /* top: -80px; */
+  }
 }
 
 @media only screen and (min-height: 801px) {
   .cont1 {
-    height: 620px;
+    height: 420px;
   }
-  .txtt{
-    top: -70px;
-}
+  .txtt {
+    /* top: -110px; */
+  }
 }
 
 @media only screen and (min-height: 851px) {
   .cont1 {
-    height: 670px;
+    height: 470px;
   }
 
-  .txtt{
-    top: -90px;
-}
+  .txtt {
+    /* top: -90px; */
+  }
 }
 
 @media only screen and (min-height: 900px) {
   .cont1 {
-    height: 750px;
+    height: 500px;
   }
-  .txtt{
-    top: -110px;
+  .txtt {
+    /* top: -110px; */
+  }
 }
-}
-
 
 @media only screen and (min-height: 1000px) {
-    .cont1 {
-      height: 900px;
-      padding-top: 150px;
-    }
-    .txtt{
-      top: -200px;
+  .cont1 {
+    height: 500px;
+    /* padding-top: 150px;
+  } 
+  .txtt {
+    /* top: -200px; */
   }
-  }
+}
 
 @media only screen and (min-height: 1100px) {
-    .cont1 {
-      height: 1000px;
-      padding-top: 150px;
-    }
-    .txtt{
-      top: -250px;
+  .cont1 {
+    height: 500px;
+    /* padding-top: 150px; */
   }
+  .txtt {
+    /* top: -250px; */
   }
+}
 
-  @media only screen and (min-height: 1300px) {
-    .cont1 {
-      height: 1000px;
-      padding-top: 150px;
-    }
-    .txtt{
-      top: -100px;
+@media only screen and (min-height: 1300px) {
+  .cont1 {
+    height: 500px;
+    /* padding-top: 150px; */
   }
+  .txtt {
+    /* top: -100px; */
   }
+}
