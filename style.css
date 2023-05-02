@@ -88,20 +88,45 @@ html {
 
 .txtt {
   position: relative;
-
+  background-color: transparent;
   max-width: 380px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 19px;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.second_row {
   background-color: transparent;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.box1 {
+  background-color: transparent;
+  width: 90%;
+  max-width: 400px;
+  height: 500px;
+}
+.box2 {
+  background-color: transparent;
+  width: 100%;
+  max-width: 380px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 500px;
 }
 .softwareDev_define {
   padding-top: 10px;
+
   background-color: transparent;
   max-width: 380px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   font-family: "Source Sans Pro", sans-serif;
   color: black;
 
@@ -112,25 +137,30 @@ html {
   margin-top: 30px;
 
   width: 100%;
-  background-color: transparent;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   font-weight: 900;
 }
+.cont2_holder {
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+}
 
 .SDLC {
   margin-top: 20px;
-  background-color: transparent;
-  width: 80%;
+
+  width: 100%;
   max-width: 400px;
   border-radius: 20px;
   color: black;
-
+  background-color: transparent;
   padding-top: 20px;
   padding-bottom: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
 }
@@ -146,8 +176,8 @@ html {
   padding-top: 0px;
   background-color: transparent;
   max-width: 380px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   font-family: "Source Sans Pro", sans-serif;
   color: black;
 
@@ -162,9 +192,12 @@ html {
 }
 .lst {
   max-width: 380px;
-  width: 90%;
+  width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 19px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: transparent;
 }
 
 .cont5 {
@@ -261,9 +294,12 @@ html {
 }
 @media only screen and (min-width: 701px) {
 }
-@media only screen and (min-width: 900px) {
-  .txtt {
-    /* padding-top: 200px; */
+@media only screen and (max-width: 900px) {
+  .box1 {
+    height: auto;
+  }
+  .box2 {
+    height: auto;
   }
 }
 
