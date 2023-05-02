@@ -34,10 +34,12 @@ var m_nav = document.getElementById("mobile_nav");
 var w_nav = document.getElementById("web_nav");
 var course_image = document.getElementById("image_Course");
 var Course_description = document.getElementById("Course_description");
+var couse_learnmore = document.getElementById("learn_more_link");
 
 course_image.src = "./assets/desktop.png";
 Course_description.textContent =
   "build desktop application for linux mac and windows using futter technology...";
+couse_learnmore.href = "./desktop.html";
 
 d_nav.classList.add("highlight_item");
 
@@ -48,6 +50,7 @@ d_nav.addEventListener("click", function () {
   course_image.src = "./assets/desktop.png";
   Course_description.textContent =
     " build desktop application for linux mac and windows using futter technology...";
+  couse_learnmore.href = "./desktop.html";
 
   // course_image.style.paddingTop=''
 });
@@ -58,6 +61,7 @@ m_nav.addEventListener("click", function () {
   course_image.src = "./assets/mobile.png";
   Course_description.textContent =
     "build mobile application for android and ios using futter technology...";
+  couse_learnmore.href = "./mobile.html";
 });
 w_nav.addEventListener("click", function () {
   w_nav.classList.add("highlight_item");
@@ -66,4 +70,5 @@ w_nav.addEventListener("click", function () {
   course_image.src = "./assets/web.png";
   Course_description.textContent =
     " build websites and web application responsive for all devices with html css js...";
+  couse_learnmore.href = "./web.html";
 });

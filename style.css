@@ -76,7 +76,43 @@ html {
   }
 }
 
-.cont1 {
+.animated_intro_title {
+  width: 190px;
+  overflow: hidden;
+  background-color: transparent;
+  height: 25px;
+  animation: blinker 0.8s step-end infinite, rr 2.2s steps(20, start) infinite;
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em;
+  border-right: 0.15em solid orange;
+  border-color: black;
+  border-right: 2px solid;
+  font-size: 16px;
+}
+
+@keyframes blinker {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes rr {
+  0% {
+    width: 190px;
+  }
+  70% {
+    width: 310px;
+  }
+  85% {
+    width: 310px;
+  }
+  100% {
+    width: 190px;
+  }
+}
+
+.first_row {
   padding-top: 20px;
   width: 100%;
   background-color: transparent;
@@ -88,10 +124,12 @@ html {
 
 .txtt {
   position: relative;
+  width: 90%;
+
   background-color: transparent;
   max-width: 380px;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -121,8 +159,6 @@ html {
   height: 500px;
 }
 .softwareDev_define {
-  padding-top: 10px;
-
   background-color: transparent;
   max-width: 380px;
   padding-left: 5%;
@@ -130,7 +166,7 @@ html {
   font-family: "Source Sans Pro", sans-serif;
   color: black;
 
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .cont2 {
@@ -151,7 +187,6 @@ html {
 
 .SDLC {
   margin-top: 20px;
-
   width: 100%;
   max-width: 400px;
   border-radius: 20px;
@@ -162,7 +197,7 @@ html {
   padding-left: 1%;
   padding-right: 1%;
   font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .cont3 {
@@ -181,7 +216,7 @@ html {
   font-family: "Source Sans Pro", sans-serif;
   color: black;
 
-  font-size: 19px;
+  font-size: 18px;
 }
 .cont4 {
   width: 100%;
@@ -194,7 +229,7 @@ html {
   max-width: 380px;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   padding-left: 5%;
   padding-right: 5%;
   background-color: transparent;
@@ -214,7 +249,7 @@ html {
 .Courses_title {
   margin-top: 50px;
   background-color: transparent;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   border-radius: 20px;
   color: black;
@@ -222,7 +257,7 @@ html {
   padding-left: 20px;
   padding-right: 20px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .cont6 {
@@ -292,14 +327,23 @@ html {
     padding-right: 10%;
   }
 }
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 899px) {
+  .second_row {
+    padding-left: 20px;
+  }
+  .txtt {
+    max-width: 320px;
+  }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 899px) {
   .box1 {
     height: auto;
   }
   .box2 {
     height: auto;
+  }
+  .Courses_title {
+    margin-top: 0px;
   }
 }
 
