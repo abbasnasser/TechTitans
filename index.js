@@ -72,3 +72,87 @@ w_nav.addEventListener("click", function () {
     " build websites and web application responsive for all devices with html css js...";
   couse_learnmore.href = "./web.html";
 });
+
+var choose_course_Q = document.getElementById("choose_course_Q");
+var choose_course_Q_dialog = document.getElementById(
+  "faq_dilaog_choose_course_Q"
+);
+// -----------------------------------------------
+var back_front_Q = document.getElementById("back_front_Q");
+var back_front_Q_dialog = document.getElementById("faq_dilaog_back_end_front");
+// ---------------------------------------------------------
+var type_of_dev_Q = document.getElementById("type_of_dev_Q");
+var type_of_dev_Q_dialog = document.getElementById("faq_dilaog_type_of_dev_Q");
+// ---------------------------------------------------------
+var flutter_Q = document.getElementById("flutter_Q");
+var faq_dilaog_flutter_Q = document.getElementById("faq_dilaog_flutter_Q");
+
+//if mobile detecetd
+if (/Android|iPhone/i.test(navigator.userAgent)) {
+  choose_course_Q.addEventListener("click", function () {
+    choose_course_Q_dialog.style.display = "block";
+
+    back_front_Q_dialog.style.display = "none";
+    type_of_dev_Q_dialog.style.display = "none";
+    faq_dilaog_flutter_Q.style.display = "none";
+  });
+
+  // ---------------------------------------------------------
+
+  back_front_Q.addEventListener("click", function () {
+    back_front_Q_dialog.style.display = "block";
+    choose_course_Q_dialog.style.display = "none";
+    type_of_dev_Q_dialog.style.display = "none";
+    faq_dilaog_flutter_Q.style.display = "none";
+  });
+
+  // ---------------------------------------------------------
+
+  type_of_dev_Q.addEventListener("click", function () {
+    type_of_dev_Q_dialog.style.display = "block";
+    choose_course_Q_dialog.style.display = "none";
+    back_front_Q_dialog.style.display = "none";
+    faq_dilaog_flutter_Q.style.display = "none";
+  });
+
+  // ---------------------------------------------------------
+
+  flutter_Q.addEventListener("click", function () {
+    faq_dilaog_flutter_Q.style.display = "block";
+    choose_course_Q_dialog.style.display = "none";
+    back_front_Q_dialog.style.display = "none";
+    type_of_dev_Q_dialog.style.display = "none";
+  });
+
+  //if desktop browser detected
+} else {
+  choose_course_Q.addEventListener("mouseenter", function () {
+    choose_course_Q_dialog.style.display = "block";
+  });
+
+  // ---------------------------------------------------------
+
+  back_front_Q.addEventListener("mouseenter", function () {
+    back_front_Q_dialog.style.display = "block";
+  });
+
+  // ---------------------------------------------------------
+
+  type_of_dev_Q.addEventListener("mouseenter", function () {
+    type_of_dev_Q_dialog.style.display = "block";
+  });
+
+  // ---------------------------------------------------------
+
+  flutter_Q.addEventListener("mouseenter", function () {
+    faq_dilaog_flutter_Q.style.display = "block";
+  });
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  var body = document.getElementById("b");
+  body.addEventListener("mouseover", function () {
+    choose_course_Q_dialog.style.display = "none";
+    back_front_Q_dialog.style.display = "none";
+    type_of_dev_Q_dialog.style.display = "none";
+    faq_dilaog_flutter_Q.style.display = "none";
+  });
+}

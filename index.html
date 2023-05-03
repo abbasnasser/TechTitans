@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tech Titans</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./fonts.css" />
+    <link rel="prefetch" href="./assets/mobile.png" />
+    <link rel="prefetch" href="./assets/web.png" />
+    <link rel="prefetch" href="./assets/desktop.png" />
   </head>
-  <body>
+  <body id="b">
     <div style="display: none" class="menues" id="menus">
       <a href="#soft_dev" style="text-decoration: none">
         <p class="menu_items">Get Started</p></a
@@ -19,10 +22,10 @@
       <a href="#cont5" style="text-decoration: none">
         <p class="menu_items">Courses</p></a
       >
-      <a href="#cont6" style="text-decoration: none">
+      <a href="#contactus" style="text-decoration: none">
         <p class="menu_items">Contact us</p></a
       >
-      <a href="#cont7" style="text-decoration: none">
+      <a href="#faqs" style="text-decoration: none">
         <p class="menu_items">FAQs</p></a
       >
     </div>
@@ -121,9 +124,6 @@
           </div>
         </div>
       </div>
-      <!-- --------------------- What is software development----------------------- -->
-
-      <!-- --------------------------------------------- -->
 
       <!-- ----------------------------------------------- -->
       <div id="cont5" class="cont5">
@@ -165,7 +165,125 @@
 
       <!-- --------------------------------------------- -->
 
-      <!-- </div> -->
+      <div class="second_row">
+        <!-- -----------contact me------------- -->
+        <div id="contactus" class="box1">
+          <div id="soft_dev" class="cont2">
+            <p class="SDLC">
+              > Contact me
+              <a href="https://wa.me/71589944">
+                <img
+                  width="50px"
+                  src="./assets/wp.png"
+                  style="position: relative; top: 20px; left: 10px"
+                  alt=""
+              /></a>
+            </p>
+          </div>
+
+          <div id="cont3" class="cont3">
+            <div
+              style="
+                width: 400px;
+                height: 300px;
+                background-color: transparent;
+                padding-left: 6%;
+              ">
+              <p>
+                Mail or Phone:
+                <input
+                  type="email"
+                  style="
+                    width: 90%;
+                    height: 20px;
+                    border-radius: 10px;
+                    padding-left: 10px;
+                    margin-top: 10px;
+                  "
+                  type="text" />
+              </p>
+              <p>
+                Text:
+                <textarea
+                  type="text"
+                  style="
+                    margin-top: 10px;
+                    height: 150px;
+                    width: 90%;
+                    border-radius: 20px;
+                    padding: 10px;
+                  "></textarea>
+              </p>
+
+              <p
+                style="
+                  width: 100px;
+                  background-color: black;
+                  color: white;
+                  height: 25px;
+                  text-align: center;
+                  border-radius: 20px;
+                  padding-top: 5px;
+                ">
+                Submit
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- --------------------Faqs------------------ -->
+        <div id="faqs" class="box2" style="background-color: transparent">
+          <div id="cont2" class="cont2">
+            <p class="faqs">> FAQs</p>
+          </div>
+
+          <div id="cont3" class="mail_form">
+            <div class="faqs_content" id="choose_course_Q">
+              > What to choose between web,desktop or mobile development ?
+            </div>
+            <div id="faq_dilaog_choose_course_Q" class="faq_dialog_box">
+              # Go for web dev if you want some thing that is easy and fast to
+              learn and will fits all devices with lite performance and easy
+              usage
+              <br />
+              <br />
+              > Go for mobile if you have more time to learn and if you want to
+              build a specific app that run just on mobile phone
+              <br />
+              <br />
+              # Go for desktop if you want to learn about building computer
+              applications like managment systems ...
+            </div>
+            <div id="back_front_Q" class="faqs_content">
+              > What is the difference between front and backend dev ?
+            </div>
+            <div id="faq_dilaog_back_end_front" class="faq_dialog_box">
+              # A front end developer is the guy that works on desiging and
+              building the user interface of an app.For example a login screen
+              username and password fields .. <br />
+              <br />
+              $ while a backend dev is responsible for building Api and working
+              with databases like SQl
+            </div>
+
+            <div id="type_of_dev_Q" class="faqs_content">
+              > Which type of development is easier ?
+            </div>
+            <div id="faq_dilaog_type_of_dev_Q" class="faq_dialog_box">
+              # Web dev is the simplest type of dev that you can learn quickly
+              but you should always practice to learn more and gain experience
+            </div>
+
+            <div id="flutter_Q" class="faqs_content">
+              > What is futter technology?
+            </div>
+            <div id="faq_dilaog_flutter_Q" class="faq_dialog_box">
+              # Flutter technology is a cross platform tool created by google to
+              help devs build desktop and mobile application faster so you can
+              use the same code for ios ,android and desktop
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./index.js"></script>
