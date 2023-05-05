@@ -1,0 +1,191 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.row {
+  background-color: transparent;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 5%; */
+}
+.box1 {
+  background-color: transparent;
+  width: 90%;
+  margin-left: 2%;
+  margin-right: 2%;
+  max-width: 600px;
+
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.box2 {
+  background-color: transparent;
+  max-width: 400px;
+  width: 90%;
+  /* height: 200px; */
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  margin-bottom: 0px;
+  padding: 5%;
+}
+
+.row2 {
+  background-color: transparent;
+  margin-top: -10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card1 {
+  background-color: transparent;
+  max-width: 400px;
+  width: 90%;
+
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 5%;
+}
+.card2 {
+  background-color: transparent;
+  max-width: 400px;
+  width: 90%;
+
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 5%;
+}
+
+.card3 {
+  background-color: transparent;
+  max-width: 400px;
+  width: 90%;
+
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 5%;
+}
+
+.small_font {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+}
+.large_font {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+.image {
+  width: 100%;
+  border-radius: 20px;
+}
+.nav_bar {
+  height: 70px;
+  width: 100%;
+  background-color: transparent;
+  color: #00477a;
+  padding-top: 10px;
+  z-index: 3;
+  position: relative;
+}
+
+.title {
+  color: black;
+  background-color: transparent;
+  border-radius: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 29px;
+  font-weight: 500;
+  position: absolute;
+  left: 5%;
+  top: 0px;
+  text-align: center;
+
+  width: 160px;
+}
+
+.menu {
+  position: relative;
+  top: 5px;
+  float: right;
+  margin-right: 5%;
+}
+.menues {
+  position: absolute;
+  background-color: black;
+
+  width: 200px;
+  top: 70px;
+  right: 5%;
+
+  z-index: 7;
+  border-radius: 20px;
+  margin-top: 10px;
+  animation: animatemenuin 0.5s;
+  border-color: black;
+  text-align: center;
+}
+.menu_items {
+  color: white;
+  font-size: 20px;
+}
+
+.add_blur_effect_menu {
+  animation: blurer 0.1s;
+  filter: blur(1px);
+}
+
+@keyframes blurer {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(1px);
+  }
+}
+@keyframes animatemenuin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .menues {
+    width: 90%;
+    right: 0px;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .row {
+    margin-top: 1px;
+  }
+  .card1 {
+    max-width: 360px;
+  }
+  .card2 {
+    max-width: 360px;
+  }
+  .card3 {
+    max-width: 360px;
+  }
+}
