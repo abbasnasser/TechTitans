@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <style>
+    .trans {
+      margin-top: 50px;
+      background-color: transparent;
+      height: 400px;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      position: absolute;
+      border-radius: 20px;
+      left: 50%;
+      top: 40%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+      animation: aimIn 1.5s;
+      padding-top: 70px;
+    }
+
+    @keyframes aimIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .username {
+      width: 99%;
+      max-width: 250px;
+      height: 40px;
+
+      border-color: black;
+      border-radius: 20px;
+      padding-left: 10px;
+      margin-left: 15px;
+      border-width: 1px;
+      font-family: "Times New Roman", Times, serif, sans-serif;
+      color: black;
+      font-size: 17px;
+    }
+    .password {
+      max-width: 250px;
+      width: 99%;
+      height: 40px;
+      margin-top: 20px;
+      border-color: black;
+      border-radius: 20px;
+      padding-left: 10px;
+      margin-left: 15px;
+      border-width: 1px;
+      font-family: "Times New Roman", Times, serif, sans-serif;
+      color: black;
+      font-size: 17px;
+    }
+    .login_btn {
+      margin-top: 80px;
+      background-color: black;
+      width: 60%;
+      height: 40px;
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .trans_twick {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .notify {
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      font-family: "Times New Roman", Times, serif, sans-serif;
+      color: black;
+      font-size: 17px;
+    }
+
+    .verify {
+      background-color: black;
+      color: white;
+      text-align: center;
+      width: 120px;
+      height: 30px;
+      border-radius: 20px;
+      padding-top: 10px;
+      margin-top: 10px;
+      /* margin: 0 auto; */
+    }
+    .code_pacle {
+      max-width: 260px;
+      width: 99%;
+      height: 40px;
+
+      border-color: black;
+      border-radius: 20px;
+      padding-left: 10px;
+      margin-left: 0px;
+
+      border-width: 1px;
+      font-family: "Times New Roman", Times, serif, sans-serif;
+      color: black;
+      font-size: 17px;
+    }
+
+    .verify_container {
+      background-color: transparent;
+      animation: aimIn 1.5s;
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 300px;
+    }
+
+    .error {
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      font-family: "Times New Roman", Times, serif, sans-serif;
+      color: black;
+      font-size: 17px;
+      display: none;
+      animation: error_pop 1s;
+      padding-top: 10px;
+    }
+
+    @keyframes error_pop {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .exists {
+      display: none;
+      margin-top: 80px;
+      position: absolute;
+      left: 50%;
+      top: 52%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      animation: error_pop 1s;
+    }
+  </style>
+  <body>
+    <div id="trans" class="trans">
+      <input
+        type="text"
+        id="username"
+        class="username"
+        placeholder="Username" />
+      <input type="email" id="email" class="password" placeholder="Email" />
+      <input
+        type="text"
+        id="number"
+        class="password"
+        placeholder="Phone Number" />
+      <input
+        type="password"
+        id="password"
+        class="password"
+        placeholder="Password" />
+      <p id="erora" class="exists"></p>
+      <div class="login_btn" onclick="Signup()">Signup</div>
+    </div>
+
+    <script src="./signup.js"></script>
+  </body>
+</html>

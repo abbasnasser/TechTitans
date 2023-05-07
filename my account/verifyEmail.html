@@ -34,34 +34,20 @@
         }
       }
 
-      .username {
+      .code {
         width: 99%;
         max-width: 250px;
         height: 40px;
+        border-color: black;
+        border-radius: 20px;
+        padding-left: 10px;
+        margin-left: 15px;
+        border-width: 1px;
+        font-family: "Times New Roman", Times, serif, sans-serif;
+        color: black;
+        font-size: 17px;
+      }
 
-        border-color: black;
-        border-radius: 20px;
-        padding-left: 10px;
-        margin-left: 15px;
-        border-width: 1px;
-        font-family: "Times New Roman", Times, serif, sans-serif;
-        color: black;
-        font-size: 17px;
-      }
-      .password {
-        max-width: 250px;
-        width: 99%;
-        height: 40px;
-        margin-top: 20px;
-        border-color: black;
-        border-radius: 20px;
-        padding-left: 10px;
-        margin-left: 15px;
-        border-width: 1px;
-        font-family: "Times New Roman", Times, serif, sans-serif;
-        color: black;
-        font-size: 17px;
-      }
       .login_btn {
         background-color: black;
         width: 60%;
@@ -75,14 +61,7 @@
         align-items: center;
         justify-content: center;
       }
-      .forget_pass {
-        font-family: "Times New Roman", Times, serif, sans-serif;
-        color: black;
-        font-size: 17px;
-        margin-top: 6px;
 
-        margin-left: 90px;
-      }
       .error {
         font-family: "Times New Roman", Times, serif, sans-serif;
         color: black;
@@ -93,32 +72,28 @@
         margin-bottom: 10px;
         text-align: center;
         background-color: transparent;
-        animation: aimIn 1s;
+        animation: aimIn 1.5s;
       }
       .op {
         display: none;
-        animation: aimIn 1s;
+        animation: aimIn 1.5s;
       }
     </style>
   </head>
   <body>
     <div class="trans">
+      <p style="padding-left: 15px">
+        A verification code is sent to your email
+      </p>
       <input
         type="text"
-        id="username"
-        class="username"
-        placeholder="Username" />
-      <input
-        type="password"
-        id="password"
-        class="password"
-        placeholder="Password" />
-      <a id="linker">
-        <div class="error"><p class="op" id="error"></p></div
-      ></a>
-      <div class="login_btn" onclick="login()">Login</div>
-      <div id="forget" class="forget_pass">forget password</div>
+        id="code"
+        class="code"
+        placeholder="Verification Code" />
+
+      <div class="error"><p class="op" id="error"></p></div>
+      <div class="login_btn" onclick="verify_code()">Verify</div>
     </div>
-    <script src="./login.js"></script>
+    <script src="./verifyEmail.js"></script>
   </body>
 </html>
