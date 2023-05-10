@@ -4,11 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css" />
   </head>
-  <body>
-    <p id="token"></p>
-    <div id="logout">logout</div>
+  <body id="b">
+    <div class="main">
+      <div class="columnf"></div>
+      <div class="column2">
+        <div class="row2">
+          <div class="Course">Course Activity</div>
+
+          <div class="enroll_box">
+            <div id="enroll_box" class="enroll">+</div>
+          </div>
+        </div>
+
+        <div class="cards" id="cards"></div>
+      </div>
+      <div><div class="centerline"></div></div>
+
+      <div class="column3">
+        <div class="row3">
+          <div id="choose_course_to_view_lessons_desktop" class="lessons">
+            #
+          </div>
+          <div class="search_box">
+            <input
+              id="search"
+              class="search"
+              type="search"
+              placeholder="Search" />
+          </div>
+          <div id="account_btn" class="account">
+            <div class="acnt_press">AN</div>
+          </div>
+        </div>
+        <div class="menu_cont">
+          <div class="user_menu_mobile" id="user_menu_mobile">
+            <div id="press" class="user_menu_items" style="color: white">
+              Color Mode
+            </div>
+            <div id="press" class="user_menu_items" style="color: white">
+              Change Password
+            </div>
+            <div id="logout" class="user_menu_items" style="color: white">
+              Logout
+            </div>
+          </div>
+        </div>
+
+        <div class="course_selecter">
+          <div id="choose_course_to_view_lessons" class="courseowrd">#</div>
+          <div id="choose_btn" class="CHOOSE_BTN">#Choose:</div>
+          <div id="add_enroll" class="add_btn">#Add:</div>
+        </div>
+        <div id="course_selecter_item" class="course_selecter_item">
+          <div id="course_selection_box" class="course_selection_box">
+            <div class="cards" id="cards"></div>
+          </div>
+          <div id="enrollment_box" class="enrollment_box"></div>
+        </div>
+        <div id="lessons_card_mobile" class="lessons_card_mobile"></div>
+
+        <div class="lessons_cards">
+          <div style="padding-top: 1vh"></div>
+          <div class="lessons_container" id="lessons_container"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="logout">logout</div> -->
     <script src="./dashboard.js"></script>
   </body>
 </html>
