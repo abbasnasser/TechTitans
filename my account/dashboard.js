@@ -1,5 +1,11 @@
-var course = [];
+var token_validation_session = sessionStorage.getItem("token");
 
+if (token_validation_session == null) {
+  window.location.href = "./myaccount.html";
+}
+
+var course = [];
+var enroller_Course_eligable = [];
 var course_card_color = [
   "#0000ff",
   "#00cc00",
@@ -29,7 +35,8 @@ function addCourse(
   color
 ) {
   var card_column = document.getElementById("cards");
-  // var carddss = document.getElementById("cardss");
+
+  console.log(coursestatusInpercent);
 
   var oncard = document.createElement("div");
   oncard.classList.add("oncard");
@@ -190,10 +197,14 @@ function addlesson_designTwo(title, DA, UA, DL, color) {
 
 function addCourse_desktop() {
   for (i in course) {
+    var percaentage = Math.floor(
+      (parseInt(course[i][1]) / parseInt(course[i][4])) * 100
+    );
+
     addCourse(
       course[i][0],
       course[i][1],
-      course[i][2],
+      percaentage,
       course[i][3],
       course_card_color[i]
     );
@@ -334,13 +345,16 @@ function search() {
 //================================mobile======================
 function add_course_selection_box() {
   var card_column = document.getElementById("course_selection_box");
-  // var carddss = document.getElementById("cardss");
+
   card_column.innerHTML = "";
   for (i in course) {
+    var percaentage = Math.floor(
+      (parseInt(course[i][1]) / parseInt(course[i][4])) * 100
+    );
     add_courseto_one_by_one_selection_box(
       course[i][0],
       course[i][1],
-      course[i][2],
+      percaentage,
       course[i][3],
       course_card_color[i]
     );
@@ -628,7 +642,6 @@ function getAll() {
       }
       for (el in data[2]) {
         for (el2 in data[2][el]) {
-          // console.log(data[2][el][el2]);
           material.push(data[2][el][el2]);
         }
       }
@@ -638,11 +651,11 @@ function getAll() {
       addCourse_desktop();
 
       lessonsFull = material;
-      console.log(lessonsFull);
 
       add_loop_lessons();
 
       enroll();
+      enroll_d();
     }
   };
 
@@ -663,13 +676,9 @@ function enroll() {
     "Intermediate Desktop",
     "Advanced Desktop",
   ];
-  var enroller_Course_eligable = [];
 
   for (elementIndex in new_array_cousre_enroller) {
     if (cousses_limit.includes(new_array_cousre_enroller[elementIndex])) {
-      console.log("already include");
-      console.log(new_array_cousre_enroller[elementIndex]);
-      console.log(cousses_limit);
     } else {
       enroller_Course_eligable.push(new_array_cousre_enroller[elementIndex]);
     }
@@ -678,22 +687,150 @@ function enroll() {
   for (el in enroller_Course_eligable) {
     if (enroller_Course_eligable[el] == "Beginner Mobile") {
       add_enroll_btn("Beginner Mobile", token, description);
+      var listenTo = document.getElementById("Beginner Mobile");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Mobile");
+        enrollInCourseFunc(token, "Beginner Mobile", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Intermediate Mobile") {
       add_enroll_btn("Intermediate Mobile", token, description);
+      var listenTo = document.getElementById("Intermediate Mobile");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Mobile");
+        enrollInCourseFunc(token, "Intermediate Mobile", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Advanced Mobile") {
       add_enroll_btn("Advanced Mobile", token, description);
+      var listenTo = document.getElementById("Advanced Mobile");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Mobile");
+        enrollInCourseFunc(token, "Advanced Mobile", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Beginner Web") {
       add_enroll_btn("Beginner Web", token, description);
+      var listenTo = document.getElementById("Beginner Web");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Web");
+        enrollInCourseFunc(token, "Beginner Web", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Intermediate Web") {
       add_enroll_btn("Intermediate Web", token, description);
+      var listenTo = document.getElementById("Intermediate Web");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Web");
+        enrollInCourseFunc(token, "Intermediate Web", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Advanced Web") {
       add_enroll_btn("Advanced Web", token, description);
+      var listenTo = document.getElementById("Advanced Web");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Web");
+        enrollInCourseFunc(token, "Advanced Web", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Beginner Desktop") {
       add_enroll_btn("Beginner Desktop", token, description);
+      var listenTo = document.getElementById("Beginner Desktop");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Desktop");
+        enrollInCourseFunc(token, "Beginner Desktop", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Intermediate Desktop") {
       add_enroll_btn("Intermediate Desktop", token, description);
+      var listenTo = document.getElementById("Intermediate Desktop");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Desktop");
+        enrollInCourseFunc(token, "Intermediate Desktop", "describe");
+      });
     } else if (enroller_Course_eligable[el] == "Advanced Desktop") {
       add_enroll_btn("Advanced Desktop", token, description);
+      var listenTo = document.getElementById("Advanced Desktop");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Desktop");
+        enrollInCourseFunc(token, "Advanced Desktop", "describe");
+      });
+    }
+  }
+}
+
+function enroll_d() {
+  https: var token = sessionStorage.getItem("token");
+  var description = "asdasdasdad";
+  var new_array_cousre_enroller = [
+    "Beginner Mobile",
+    "Intermediate Mobile",
+    "Advanced Mobile",
+    "Beginner Web",
+    "Intermediate Web",
+    "Advanced Web",
+    "Beginner Desktop",
+    "Intermediate Desktop",
+    "Advanced Desktop",
+  ];
+
+  for (el in enroller_Course_eligable) {
+    if (enroller_Course_eligable[el] == "Beginner Mobile") {
+      add_enroll_btn_d("Beginner Mobile_m", "Beginner Mobile");
+      var listenTo = document.getElementById("Beginner Mobile_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Mobile_m");
+        enrollInCourseFunc(token, "Beginner Mobile", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Intermediate Mobile") {
+      add_enroll_btn_d("Intermediate Mobile_m", "Intermediate Mobile");
+      var listenTo = document.getElementById("Intermediate Mobile_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Mobile");
+        enrollInCourseFunc(token, "Intermediate Mobile", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Advanced Mobile") {
+      add_enroll_btn_d("Advanced Mobile_m", "Advanced Mobile");
+      var listenTo = document.getElementById("Advanced Mobile_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Mobile");
+        enrollInCourseFunc(token, "Advanced Mobile", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Beginner Web") {
+      add_enroll_btn_d("Beginner Web_m", "Beginner Web");
+      var listenTo = document.getElementById("Beginner Web_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Web");
+        enrollInCourseFunc(token, "Beginner Web", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Intermediate Web") {
+      add_enroll_btn_d("Intermediate Web_m", "Intermediate Web");
+      var listenTo = document.getElementById("Intermediate Web_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Web");
+        enrollInCourseFunc(token, "Intermediate Web", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Advanced Web") {
+      add_enroll_btn_d("Advanced Web_m", "Advanced Web");
+      var listenTo = document.getElementById("Advanced Web_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Web");
+        enrollInCourseFunc(token, "Advanced Web", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Beginner Desktop") {
+      add_enroll_btn_d("Beginner Desktop_m", "Beginner Desktop");
+      var listenTo = document.getElementById("Beginner Desktop_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Beginner Desktop");
+        enrollInCourseFunc(token, "Beginner Desktop", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Intermediate Desktop") {
+      add_enroll_btn_d("Intermediate Desktop_m", "Intermediate Desktop");
+      var listenTo = document.getElementById("Intermediate Desktop_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Intermediate Desktop");
+        enrollInCourseFunc(token, "Intermediate Desktop", "describe");
+      });
+    } else if (enroller_Course_eligable[el] == "Advanced Desktop") {
+      add_enroll_btn_d("Advanced Desktop_m", "Advanced Desktop");
+      var listenTo = document.getElementById("Advanced Desktop_m");
+      listenTo.addEventListener("click", function () {
+        console.log("Advanced Desktop");
+        enrollInCourseFunc(token, "Advanced Desktop", "describe");
+      });
     }
   }
 }
@@ -715,7 +852,6 @@ function enrollInCourseFunc(token, courseName, describe) {
     var data = JSON.parse(this.response);
 
     if (request.status >= 200 && request.status < 400) {
-      console.log("done");
       location.reload();
     }
   };
@@ -736,12 +872,10 @@ function main() {
   var course_selection_box = document.getElementById("course_selection_box");
   var enrollment_box = document.getElementById("enrollment_box");
   var user_menu_mobile = document.getElementById("user_menu_mobile");
-  var press = document.getElementById("press");
-  var logout = document.getElementById("logout");
 
-  press.addEventListener("click", function () {
-    console.log("sadasda");
-  });
+  var logout = document.getElementById("logout");
+  var enroll_box = document.getElementById("enroll_box");
+  var add_Course = document.getElementById("add_Course");
 
   window.addEventListener("click", function (e) {
     if (document.getElementById("account_btn").contains(e.target)) {
@@ -763,10 +897,13 @@ function main() {
       course_selecter_item.style.display = "block";
       enrollment_box.style.display = "flex";
       course_selection_box.style.display = "none";
+    } else if (document.getElementById("enroll_box").contains(e.target)) {
+      add_Course.style.display = "block";
     } else {
       course_selecter_item.style.display = "none";
       course_selection_box.style.display = "none";
       enrollment_box.style.display = "none";
+      add_Course.style.display = "none";
       add_course_selection_box();
       add_loop_lessons();
     }
@@ -777,7 +914,7 @@ function main() {
     localStorage.removeItem("password");
 
     sessionStorage.removeItem("token");
-    window.location.href = "./myaccount.html";
+    window.location.href = "../index.html";
   });
 }
 
@@ -785,31 +922,67 @@ main();
 
 function add_enroll_btn(text, token, description) {
   var enrollment_box = document.getElementById("enrollment_box");
+
+  var enrollment_box_d = document.getElementById("add_Course");
+
   var btn = document.createElement("div");
   btn.classList.add("course_enroller");
   btn.textContent = text;
   var id = "";
 
   if (text == "Beginner Mobile") {
-    id = "Mobile Beginner";
+    id = "Beginner Mobile";
   } else if (text == "Intermediate Mobile") {
-    id = "Mobile Intermediate";
+    id = "Intermediate Mobile";
   } else if (text == "Advanced Mobile") {
-    id = "Mobile Advanced";
+    id = "Advanced Mobile";
   } else if (text == "Beginner Web") {
-    id = "Web Beginner";
+    id = "Beginner Web";
   } else if (text == "Intermediate Web") {
-    id = "Web Intermediate";
+    id = "Intermediate Web";
   } else if (text == "Advanced Web") {
-    id = "Web Advanced";
+    id = "Advanced Web";
   } else if (text == "Beginner Desktop") {
-    id = "Desktop Beginner";
+    id = "Beginner Desktop";
   } else if (text == "Intermediate Desktop") {
-    id = "Desktop Intermediate";
+    id = "Intermediate Desktop";
   } else if (text == "Advanced Desktop") {
-    id = "Desktop Advanced";
+    id = "Advanced Desktop";
   }
 
   btn.id = id;
   enrollment_box.appendChild(btn);
+  // enrollment_box_d.appendChild(btn);
+}
+
+function add_enroll_btn_d(text, name) {
+  var enrollment_box_d = document.getElementById("add_Course");
+
+  var btn = document.createElement("div");
+  btn.classList.add("course_enroller");
+  btn.textContent = name;
+  var id = "";
+
+  if (text == "Beginner Mobile_m") {
+    id = "Beginner Mobile_m";
+  } else if (text == "Intermediate Mobile_m") {
+    id = "Intermediate Mobile_m";
+  } else if (text == "Advanced Mobile_m") {
+    id = "Advanced Mobile_m";
+  } else if (text == "Beginner Web_m") {
+    id = "Beginner Web_m";
+  } else if (text == "Intermediate Web_m") {
+    id = "Intermediate Web_m";
+  } else if (text == "Advanced Web_m") {
+    id = "Advanced Web_m";
+  } else if (text == "Beginner Desktop_m") {
+    id = "Beginner Desktop_m";
+  } else if (text == "Intermediate Desktop_m") {
+    id = "Intermediate Desktop_m";
+  } else if (text == "Advanced Desktop_m") {
+    id = "Advanced Desktop_m";
+  }
+
+  btn.id = id;
+  enrollment_box_d.appendChild(btn);
 }

@@ -1,4 +1,7 @@
-if (localStorage.getItem("username") != null) {
+if (
+  localStorage.getItem("username") != null &&
+  sessionStorage.getItem("token") != null
+) {
   console.log("data exist");
   var container = document.getElementById("container");
   container.innerHTML = "";
@@ -40,3 +43,36 @@ function login(username, password) {
 
   request.send();
 }
+
+var menu = document.getElementById("mnu");
+
+function myFunction() {
+  var x = document.getElementById("menus");
+  var b = document.getElementById("b");
+
+  if (x.style.display === "block") {
+    x.style.animation = "animatemenuout 0.5s";
+    setTimeout(hide, 400);
+    function hide() {
+      x.style.display = "none";
+    }
+  } else {
+    x.style.animation = "animatemenuin 0.5s";
+    // b.classList.add("add_blur_effect_menu");
+    x.style.display = "block";
+  }
+}
+
+var x = document.getElementById("mnu");
+var x2 = document.getElementById("menus");
+x.addEventListener("click", myFunction);
+
+window.addEventListener("mouseup", function (event) {
+  if (event.target != x2) {
+    var b = document.getElementById("cor1");
+
+    // b.classList.remove("add_blur_effect_menu");
+
+    x2.style.display = "none";
+  }
+});

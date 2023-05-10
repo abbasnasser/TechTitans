@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="../fonts.css" />
 
     <style>
+      html {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
       .trans {
         margin-top: 100px;
         background-color: white;
@@ -99,9 +105,88 @@
         display: none;
         animation: aimIn 1s;
       }
+      .nav_bar {
+        height: 70px;
+        width: 100%;
+        background-color: transparent;
+        color: #00477a;
+        padding-top: 10px;
+        z-index: 3;
+        position: relative;
+      }
+      .title {
+        color: black;
+        background-color: transparent;
+        border-radius: 10px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 29px;
+        font-weight: 500;
+        position: absolute;
+        left: 5%;
+        top: 0px;
+        text-align: center;
+
+        width: 160px;
+      }
+      .menu {
+        position: relative;
+        top: 5px;
+        float: right;
+        margin-right: 5%;
+      }
+      .menues {
+        position: absolute;
+        background-color: black;
+        /* height: 240px; */
+        width: 200px;
+        top: 70px;
+        right: 5%;
+
+        z-index: 7;
+        border-radius: 20px;
+        margin-top: 10px;
+        animation: animatemenuin 0.5s;
+        border-color: black;
+        text-align: center;
+      }
+      .menu_items {
+        color: white;
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .menues {
+          width: 90%;
+          right: 0px;
+          margin-right: 5%;
+        }
+      }
     </style>
   </head>
   <body>
+    <div style="display: none" class="menues" id="menus">
+      <a href="../index.html" style="text-decoration: none">
+        <p class="menu_items">Home</p></a
+      >
+      <a href="./signup.html" style="text-decoration: none">
+        <p class="menu_items">Signup</p></a
+      >
+    </div>
+    <!-- --------------------nav bar----------------- -->
+    <div id="nav_bar" class="nav_bar">
+      <a style="text-decoration: none" href="">
+        <p class="title">Tech Titans</p></a
+      >
+      <a id="mnu" style="text-decoration: none">
+        <img
+          class="menu"
+          style="width: 50px"
+          src="../assets/menu.png"
+          alt=""
+          srcset="" />
+      </a>
+    </div>
+    <!-- end of nav bar -->
     <div class="trans">
       <input
         type="text"

@@ -1,3 +1,9 @@
+html {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 body {
   margin: 20px;
   margin-top: 0px;
@@ -40,6 +46,9 @@ body {
   height: 90vh;
   width: 26%;
   min-width: 400px;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
 
   background-color: transparent;
 }
@@ -142,9 +151,20 @@ body {
   background-color: transparent;
   height: 20px;
 }
+.cont2 {
+  background-color: black;
+  width: 26%;
+
+  position: absolute;
+  min-width: 400px;
+  max-width: 400px;
+  display: none;
+  border-radius: 20px;
+  margin-top: -50px;
+}
 .cards {
   background-color: white;
-  /* height: 70vh; */
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -176,7 +196,7 @@ body {
 .level_name {
   width: 70%;
   margin-left: 30px;
-  font-size: 24px;
+  font-size: min(5vmin, 25px);
   font-weight: 900;
 }
 .sessions_number_box {
@@ -285,7 +305,7 @@ body {
   justify-content: start;
   align-items: center;
   padding-left: 5%;
-  font-size: 30px;
+  font-size: min(5vmin, 25px);
 }
 .CHOOSE_BTN {
   width: 20%;
@@ -500,6 +520,7 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
+  font-size: min(5vmin, 20px);
 }
 .upload_assignment {
   background-color: white;
@@ -512,6 +533,7 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
+  font-size: min(5vmin, 20px);
 }
 .download_lesson {
   background-color: white;
@@ -525,6 +547,7 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
+  font-size: min(5vmin, 20px);
 }
 
 .lessontitle_card2 {

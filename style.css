@@ -1,5 +1,9 @@
 html {
   scroll-behavior: smooth;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 body {
@@ -140,9 +144,10 @@ body {
   width: 90%;
 
   background-color: transparent;
-  max-width: 380px;
+  max-width: 300px;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: min(20vmin, 45px);
   padding-left: 5%;
   padding-right: 5%;
 }
