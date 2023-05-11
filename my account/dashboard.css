@@ -29,7 +29,7 @@ body {
   z-index: 4;
 }
 .main {
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   align-items: center;
   margin: 0px;

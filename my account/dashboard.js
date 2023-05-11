@@ -4,7 +4,9 @@ var trans = document.getElementById("main");
 var trans2 = document.getElementById("cc");
 // var trans3 = document.getElementById("lessons_card_mobile");
 var trans4 = document.getElementById("cards");
-
+trans.style.display = "none";
+trans4.style.display = "none";
+logo.style.display = "flex";
 if (token_validation_session == null) {
   window.location.href = "./myaccount.html";
 }
@@ -13,9 +15,6 @@ if (token_validation_session == null) {
 // trans2.style.display = "none";
 // // trans3.style.display = "none";
 // trans4.style.display = "none";
-trans.style.display = "none";
-trans4.style.display = "none";
-logo.style.display = "flex";
 
 var course = [];
 var enroller_Course_eligable = [];
