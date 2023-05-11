@@ -1,8 +1,21 @@
 var token_validation_session = sessionStorage.getItem("token");
+var logo = document.getElementById("logo");
+var trans = document.getElementById("main");
+var trans2 = document.getElementById("cc");
+// var trans3 = document.getElementById("lessons_card_mobile");
+var trans4 = document.getElementById("cards");
 
 if (token_validation_session == null) {
   window.location.href = "./myaccount.html";
 }
+
+// // trans.style.display = "none";
+// trans2.style.display = "none";
+// // trans3.style.display = "none";
+// trans4.style.display = "none";
+trans.style.display = "none";
+trans4.style.display = "none";
+logo.style.display = "flex";
 
 var course = [];
 var enroller_Course_eligable = [];
@@ -617,7 +630,18 @@ function getAll() {
   https: var token = sessionStorage.getItem("token");
   var course_list = [];
   var material = [];
+  course = [];
+  lessonsFull = [];
 
+  course_now = [];
+
+  search_list_spare = [];
+  search_lisr_main = [];
+
+  cousses_limit = [];
+
+  var carddd = document.getElementById("cards");
+  carddd.innerHTML = "";
   var request = new XMLHttpRequest();
   https: request.open(
     "GET",
@@ -640,6 +664,7 @@ function getAll() {
         course_list.push(temp_list);
         cousses_limit.push(data[1][i][1]);
       }
+
       for (el in data[2]) {
         for (el2 in data[2][el]) {
           material.push(data[2][el][el2]);
@@ -656,6 +681,14 @@ function getAll() {
 
       enroll();
       enroll_d();
+
+      // trans.style.display = "flex";
+      // trans2.style.display = "flex";
+      // // trans3.style.display = "block";
+      // trans4.style.display = "flex";
+      logo.style.display = "none";
+      trans4.style.display = "flex";
+      trans.style.display = "flex";
     }
   };
 
@@ -665,6 +698,7 @@ function getAll() {
 function enroll() {
   https: var token = sessionStorage.getItem("token");
   var description = "asdasdasdad";
+
   var new_array_cousre_enroller = [
     "Beginner Mobile",
     "Intermediate Mobile",
@@ -836,6 +870,10 @@ function enroll_d() {
 }
 
 function enrollInCourseFunc(token, courseName, describe) {
+  logo.style.display = "flex";
+  trans.style.display = "none";
+  trans4.style.display = "none";
+
   var request = new XMLHttpRequest();
   https: request.open(
     "GET",
@@ -852,6 +890,8 @@ function enrollInCourseFunc(token, courseName, describe) {
     var data = JSON.parse(this.response);
 
     if (request.status >= 200 && request.status < 400) {
+      // logo.style.display = "none";
+      // trans.style.display = "flex";
       location.reload();
     }
   };

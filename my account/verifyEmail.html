@@ -12,6 +12,23 @@
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
       }
+
+      .logo {
+        width: 120px;
+        position: absolute;
+      }
+      .logo_container {
+        background-color: transparent;
+        width: 95%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        position: absolute;
+        display: none;
+        z-index: 4;
+      }
       .trans {
         margin-top: 100px;
         background-color: white;
@@ -86,7 +103,10 @@
     </style>
   </head>
   <body>
-    <div class="trans">
+    <div id="logo" class="logo_container">
+      <img class="logo" src="../assets/logo.gif" alt="" srcset="" />
+    </div>
+    <div class="trans" id="trans">
       <p style="padding-left: 15px">
         A verification code is sent to your email
       </p>

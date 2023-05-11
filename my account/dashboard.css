@@ -8,12 +8,32 @@ body {
   margin: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
+  overflow-y: auto;
+}
+.logo {
+  width: 120px;
+  position: absolute;
+}
+.logo_container {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: -12px;
+  height: 97vh;
+  position: absolute;
+  display: none;
+  z-index: 4;
 }
 .main {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   margin: 0px;
+  z-index: 1;
 }
 
 .columnf {
@@ -333,6 +353,8 @@ body {
 .enrollment_box {
   border-radius: 20px;
   display: none;
+  margin-top: -20px;
+  height: 60vh;
 
   justify-content: center;
   align-items: center;
@@ -340,6 +362,8 @@ body {
   background-color: black;
   flex-wrap: wrap;
   overflow-y: scroll;
+  scrollbar-color: red yellow;
+
   margin-bottom: 20px;
 }
 .course_enroller {
@@ -357,12 +381,18 @@ body {
 }
 
 .add_btn {
-  width: 20%;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+  border-color: transparent;
+  border-style: solid;
+
+  border-radius: 20px;
+  border-width: 1px;
 }
 .lessons {
   font-size: 30px;
@@ -440,6 +470,7 @@ body {
   overflow-y: auto;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  z-index: 1;
 }
 
 .show {
@@ -632,13 +663,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: rgb(180, 177, 177);
   border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: grey;
+  background: rgb(229, 229, 229);
 }
 @media only screen and (min-width: 1101px) {
   .course_selecter_item {
@@ -665,11 +696,15 @@ body {
   }
   .menu_cont {
     width: 100%;
-
+    z-index: 3;
     background-color: transparent;
 
     min-width: 450px;
     justify-content: end;
+  }
+  .logo_container {
+    /* margin-top: 200px; */
+    width: 95%;
   }
 }
 
@@ -680,7 +715,10 @@ body {
     align-items: center;
     justify-content: center;
   }
-
+  .logo_container {
+    margin-top: 97vh;
+    width: 100%;
+  }
   /* #flex { display: flex; flex-direction: column; } */
 
   .main {
@@ -692,6 +730,7 @@ body {
 
     flex-direction: column;
   }
+
   .columnf {
     width: 0px;
     display: none;

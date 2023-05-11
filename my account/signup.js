@@ -4,6 +4,8 @@ var username = document.getElementById("username");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 var phone = document.getElementById("number");
+var logo = document.getElementById("logo");
+var trans = document.getElementById("trans");
 
 function ValidateEmail(input) {
   var validRegex =
@@ -27,6 +29,8 @@ function Signup() {
     const myTimeout = setTimeout(hide, 5000);
   } else {
     var request = new XMLHttpRequest();
+    trans.style.display = "none";
+    logo.style.display = "flex";
 
     https: request.open(
       "GET",
@@ -52,6 +56,8 @@ function Signup() {
           window.location.href = "./verifyEmail.html";
         } else {
           if (data[1] == "emailexist") {
+            trans.style.display = "block";
+            logo.style.display = "none";
             var erBox = document.getElementById("erora");
             erBox.textContent = "Account already exists";
             erBox.style.display = "block";
@@ -69,7 +75,6 @@ function Signup() {
 }
 
 function verify_code(code, emails) {
-  //script.google.com/macros/s/AKfycbzeh1gURixUuHLB8o1KrfAP_IR6aoP9F5u4YAnJSgumF3UfF8qshTCvDBIhwu7fxxvZ/exec?function=verifymail&email=nasserabbas783@gmail.com&code=753317
   https: var request = new XMLHttpRequest();
   https: request.open(
     "GET",
@@ -88,6 +93,8 @@ function verify_code(code, emails) {
 
         window.location.href = "./login.html";
       } else if (data[1] == "account already verified") {
+        trans.style.display = "block";
+        logo.style.display = "none";
         var er = document.getElementById("error");
         error.textContent = "account is already verified";
         er.style.display = "block";
@@ -96,6 +103,8 @@ function verify_code(code, emails) {
         }
         const myTimeout = setTimeout(hide, 5000);
       } else if (data[1] == "false code") {
+        trans.style.display = "block";
+        logo.style.display = "none";
         var er = document.getElementById("error");
         error.textContent = "incorrect verification code try again";
         er.style.display = "block";

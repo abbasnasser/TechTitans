@@ -1,7 +1,14 @@
+var logo = document.getElementById("logo");
+var trans = document.getElementById("container");
+var nav_bar = document.getElementById("nav_bar");
+
 if (
   localStorage.getItem("username") != null &&
   sessionStorage.getItem("token") != null
 ) {
+  trans.style.display = "none";
+  logo.style.display = "flex";
+  nav_bar.style.display = "none";
   console.log("data exist");
   var container = document.getElementById("container");
   container.innerHTML = "";

@@ -13,6 +13,22 @@
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
       }
+      .logo {
+        width: 120px;
+        position: absolute;
+      }
+      .logo_container {
+        background-color: transparent;
+        width: 95%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        position: absolute;
+        display: none;
+        z-index: 4;
+      }
       .trans {
         margin-top: 100px;
         background-color: white;
@@ -29,6 +45,7 @@
 
         animation: aimIn 1.5s;
         padding-top: 70px;
+        z-index: 1;
       }
 
       @keyframes aimIn {
@@ -164,6 +181,9 @@
     </style>
   </head>
   <body>
+    <div id="logo" class="logo_container">
+      <img class="logo" src="../assets/logo.gif" alt="" srcset="" />
+    </div>
     <div style="display: none" class="menues" id="menus">
       <a href="../index.html" style="text-decoration: none">
         <p class="menu_items">Home</p></a
@@ -187,7 +207,7 @@
       </a>
     </div>
     <!-- end of nav bar -->
-    <div class="trans">
+    <div class="trans" id="trans">
       <input
         type="text"
         id="username"

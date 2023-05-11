@@ -1,8 +1,15 @@
 var username = document.getElementById("username");
 var password = document.getElementById("password");
+var logo = document.getElementById("logo");
+var trans = document.getElementById("trans");
+var nav_bar = document.getElementById("nav_bar");
+
 function login() {
+  trans.style.display = "none";
+  logo.style.display = "flex";
+  nav_bar.style.display = "none";
+
   var request = new XMLHttpRequest();
-  //script.google.com/macros/s/AKfycbzeh1gURixUuHLB8o1KrfAP_IR6aoP9F5u4YAnJSgumF3UfF8qshTCvDBIhwu7fxxvZ/exec?function=login&email=nasserabbas783@gmail.com&password=abbas
   https: request.open(
     "GET",
     "https://script.google.com/macros/s/AKfycbzeh1gURixUuHLB8o1KrfAP_IR6aoP9F5u4YAnJSgumF3UfF8qshTCvDBIhwu7fxxvZ/exec?function=login&email=" +
@@ -24,6 +31,9 @@ function login() {
 
         window.location.href = "./dashboard.html";
       } else if (data[1] == "credentialserror") {
+        logo.style.display = "none";
+        trans.style.display = "block";
+        nav_bar.style.display = "block";
         var atrlinl = document.getElementById("linker");
 
         atrlinl.href = "";
@@ -37,6 +47,9 @@ function login() {
         }
         const myTimeout = setTimeout(hide, 3000);
       } else if (data[1] == "verifyemail") {
+        logo.style.display = "none";
+        trans.style.display = "block";
+        nav_bar.style.display = "block";
         var er_box = document.getElementById("error");
         er_box.textContent = "Your email is not verified";
         er_box.style.display = "block";
@@ -88,12 +101,16 @@ function sendNewPass() {
       username.value,
     true
   );
+  trans.style.display = "none";
+  logo.style.display = "flex";
 
   https: request.onload = function () {
     var data = JSON.parse(this.response);
 
     if (request.status >= 200 && request.status < 400) {
       if (data[1] == "newpassword sent to your mail") {
+        trans.style.display = "block";
+        logo.style.display = "none";
         var atrlinl = document.getElementById("linker");
 
         atrlinl.href = "";
@@ -110,6 +127,8 @@ function sendNewPass() {
       }
     } else if (data[1] == "email doesnt exist") {
       var atrlinl = document.getElementById("linker");
+      trans.style.display = "block";
+      logo.style.display = "none";
 
       atrlinl.href = "";
       atrlinl.removeAttribute("href");
