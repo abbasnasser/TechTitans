@@ -1,5 +1,3 @@
-// https://script.google.com/macros/s/AKfycbzeh1gURixUuHLB8o1KrfAP_IR6aoP9F5u4YAnJSgumF3UfF8qshTCvDBIhwu7fxxvZ/exec?function=signup&email=nasserabbas783@gmail.com&password=toor&phone=71589944&username=abbas nasser
-
 var username = document.getElementById("username");
 var email = document.getElementById("email");
 var password = document.getElementById("password");

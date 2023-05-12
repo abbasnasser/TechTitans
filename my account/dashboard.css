@@ -166,7 +166,7 @@ body {
 .user_menu_items {
   color: white;
   font-size: 20px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   background-color: transparent;
   height: 20px;
@@ -184,7 +184,8 @@ body {
 }
 .cards {
   background-color: white;
-  height: 600px;
+  height: auto;
+  max-height: 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -193,7 +194,7 @@ body {
 
 .oncard {
   background-color: white;
-  height: 200px;
+  height: auto;
   width: 90%;
   border-radius: 50px;
   margin-bottom: 20px;
@@ -241,7 +242,8 @@ body {
 }
 .row_card2 {
   background-color: transparent;
-  height: 70px;
+  height: auto;
+  min-height: 50px;
   padding-left: 20px;
   margin-top: -10px;
 
@@ -325,7 +327,7 @@ body {
   justify-content: start;
   align-items: center;
   padding-left: 5%;
-  font-size: min(5vmin, 25px);
+  font-size: min(4.5vmin, 25px);
 }
 .CHOOSE_BTN {
   width: 20%;
@@ -340,7 +342,8 @@ body {
   z-index: 7;
   display: none;
   justify-content: center;
-  height: 60vh;
+  height: auto;
+  max-height: 60vh;
   align-items: center;
   width: 100%;
 
@@ -354,7 +357,7 @@ body {
   border-radius: 20px;
   display: none;
   margin-top: -20px;
-  height: 60vh;
+  /* height: 60vh; */
 
   justify-content: center;
   align-items: center;
@@ -543,7 +546,8 @@ body {
 
 .download_assignment {
   background-color: white;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   display: flex;
@@ -555,7 +559,8 @@ body {
 }
 .upload_assignment {
   background-color: white;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   margin-left: 5px;
@@ -568,7 +573,8 @@ body {
 }
 .download_lesson {
   background-color: white;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   margin-left: 5px;
@@ -617,7 +623,8 @@ body {
 .download_assignment_card2 {
   background-color: black;
   color: white;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   display: flex;
@@ -628,7 +635,8 @@ body {
 .upload_assignment_card2 {
   color: white;
   background-color: black;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   margin-left: 5px;
@@ -640,7 +648,8 @@ body {
 .download_lesson_card2 {
   color: white;
   background-color: black;
-  height: 50px;
+  height: auto;
+  min-height: 40px;
   width: 80px;
   border-radius: 20px;
   margin-left: 5px;
@@ -786,15 +795,14 @@ body {
     width: 100%;
     background-color: transparent;
     z-index: 5;
-    /* display: flex;
-
-    flex-wrap:wrap ;
-    justify-content: center; */
+    height: auto;
   }
 
   .lessons_card_mobile {
     width: 100%;
     display: block;
+    height: auto;
+    max-height: 60vh;
   }
   .lesson_one_card {
     width: 100%;
@@ -819,32 +827,34 @@ body {
     width: 70%;
     justify-content: right;
     margin-right: 20px;
-    font-size: min(5vmin, 20px);
+    font-size: min(4vmin, 20px);
   }
 
   .lessontitle {
     margin-left: 10%;
     margin-right: 10%;
     width: 20%;
-    font-size: min(5vmin, 25px);
+    font-size: min(4vmin, 23px);
   }
 
   .download_assignment {
-    width: min(15vmin, 80px);
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
   .upload_assignment {
-    width: min(15vmin, 80px);
-    /* width: 15vmin; */
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
   .download_lesson {
-    width: min(15vmin, 80px);
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
 
   .lessontitle_card2 {
     margin-left: 10%;
     margin-right: 10%;
     width: 20%;
-    font-size: min(5vmin, 25px);
+    font-size: min(4vmin, 23px);
   }
 
   .btns_card2 {
@@ -854,13 +864,16 @@ body {
     font-size: min(5vmin, 20px);
   }
   .download_assignment_card2 {
-    width: min(15vmin, 80px);
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
   .upload_assignment_card2 {
-    width: min(15vmin, 80px);
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
   .download_lesson_card2 {
-    width: min(15vmin, 80px);
+    width: min(13vmin, 80px);
+    font-size: min(4vmin, 20px);
   }
   .lessons_card_mobile {
     background-color: transparent;

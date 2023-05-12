@@ -5,12 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="../fonts.css" />
 
     <style>
       html {
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
+      }
+      .image {
+        border-radius: 20px;
+        max-width: 300px;
+      }
+      .nav_bar {
+        height: 70px;
+        width: 100%;
+        background-color: transparent;
+        color: #00477a;
+        padding-top: 10px;
+        z-index: 3;
+        position: relative;
+      }
+      .title {
+        color: black;
+        background-color: transparent;
+        border-radius: 10px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 29px;
+        font-weight: 500;
+        position: absolute;
+        left: 5%;
+        top: 0px;
+        text-align: center;
+
+        width: 160px;
+      }
+      .menu {
+        position: relative;
+        top: 5px;
+        float: right;
+        margin-right: 5%;
+      }
+      .menues {
+        position: absolute;
+        background-color: black;
+        /* height: 240px; */
+        width: 200px;
+        top: 70px;
+        right: 5%;
+
+        z-index: 7;
+        border-radius: 20px;
+        margin-top: 10px;
+        animation: animatemenuin 0.5s;
+        border-color: black;
+        text-align: center;
+      }
+      .menu_items {
+        color: white;
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .menues {
+          width: 90%;
+          right: 0px;
+          margin-right: 5%;
+        }
       }
       .trans {
         margin-top: 100px;
@@ -83,11 +144,54 @@
         display: none;
         animation: aimIn 1.5s;
       }
+      .logo {
+        width: 120px;
+        position: absolute;
+      }
+      .logo_container {
+        background-color: transparent;
+        width: 95%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        position: absolute;
+        display: none;
+        z-index: 4;
+      }
     </style>
   </head>
   <body>
-    <div class="trans">
-      <input type="text" id="code" class="code" placeholder="New password" />
+    <div id="logo" class="logo_container">
+      <img class="logo" src="../assets/logo.gif" alt="" srcset="" />
+    </div>
+    <div style="display: none" class="menues" id="menus">
+      <a href="../index.html" style="text-decoration: none">
+        <p class="menu_items">Home</p></a
+      >
+      <a href="./dashboard.html" style="text-decoration: none">
+        <p class="menu_items">Dashboard</p></a
+      >
+    </div>
+    <!-- --------------------nav bar----------------- -->
+    <div id="nav_bar" class="nav_bar">
+      <a style="text-decoration: none" href="">
+        <p class="title">Tech Titans</p></a
+      >
+      <a id="mnu" style="text-decoration: none">
+        <img
+          class="menu"
+          style="width: 50px"
+          src="../assets/menu.png"
+          alt=""
+          srcset="" />
+      </a>
+    </div>
+    <div class="trans" id="trans">
+      <input type="text" id="oldpass" class="code" placeholder="Old Password" />
+      <div style="height: 10px"></div>
+      <input type="text" id="newpass" class="code" placeholder="New Password" />
 
       <div class="error"><p class="op" id="error"></p></div>
       <div class="login_btn" onclick="reset()">Change password</div>

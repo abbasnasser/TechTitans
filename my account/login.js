@@ -3,13 +3,18 @@ var password = document.getElementById("password");
 var logo = document.getElementById("logo");
 var trans = document.getElementById("trans");
 var nav_bar = document.getElementById("nav_bar");
+var local_pass_change = localStorage.getItem("change_pass");
+if (local_pass_change == "true") {
+  window.alert("Password Changed");
+  localStorage.removeItem("change_pass");
+}
 
 function login() {
   trans.style.display = "none";
   logo.style.display = "flex";
   nav_bar.style.display = "none";
-
   var request = new XMLHttpRequest();
+
   https: request.open(
     "GET",
     "https://script.google.com/macros/s/AKfycbzeh1gURixUuHLB8o1KrfAP_IR6aoP9F5u4YAnJSgumF3UfF8qshTCvDBIhwu7fxxvZ/exec?function=login&email=" +

@@ -2,7 +2,6 @@ var token_validation_session = sessionStorage.getItem("token");
 var logo = document.getElementById("logo");
 var trans = document.getElementById("main");
 var trans2 = document.getElementById("cc");
-// var trans3 = document.getElementById("lessons_card_mobile");
 var trans4 = document.getElementById("cards");
 trans.style.display = "none";
 trans4.style.display = "none";
@@ -19,15 +18,15 @@ if (token_validation_session == null) {
 var course = [];
 var enroller_Course_eligable = [];
 var course_card_color = [
-  "#0000ff",
-  "#00cc00",
-  "#ffff00",
-  "#cc0066",
-  "#6600cc",
-  "#00ffff",
-  "#ffcc00",
-  "#ffcccc",
-  "#ff66cc",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
+  "#000000",
 ];
 var lessonsFull = [];
 var course_now = [];
@@ -208,6 +207,7 @@ function addlesson_designTwo(title, DA, UA, DL, color) {
 }
 
 function addCourse_desktop() {
+  console.log(course.length);
   for (i in course) {
     var percaentage = Math.floor(
       (parseInt(course[i][1]) / parseInt(course[i][4])) * 100
@@ -270,13 +270,11 @@ function addCourse_desktop() {
 
 function addLessons(lessons) {
   var lesson_cont = document.getElementById("lessons_container");
-  var enroll_box = document.getElementById("enroll_box");
+  // var enroll_box = document.getElementById("enroll_box");
 
   lesson_cont.classList.remove("show");
 
   lesson_cont.classList.add("hide");
-  enroll_box.classList.remove("show");
-  enroll_box.classList.add("hide");
 
   function hide() {
     lesson_cont.innerHTML = "";
@@ -299,11 +297,11 @@ function addLessons(lessons) {
         );
       }
     }
-    enroll_box.style.backgroundColor = lessons[0];
+    // enroll_box.style.backgroundColor = lessons[0];
     lesson_cont.classList.remove("hide");
     lesson_cont.classList.add("show");
-    enroll_box.classList.remove("hide");
-    enroll_box.classList.add("add");
+    // enroll_box.classList.remove("hide");
+    // enroll_box.classList.add("add");
   }
   setTimeout(hide, 400);
 }
@@ -492,14 +490,14 @@ function addLessons_mobiel(lessons) {
   lesson_cont.classList.remove("show");
 
   lesson_cont.classList.add("hide");
-  enroll_box.classList.remove("show");
-  enroll_box.classList.add("hide");
+  // enroll_box.classList.remove("show");
+  // enroll_box.classList.add("hide");
 
   function hide() {
     lesson_cont.innerHTML = "";
     for (var i = 1, len = lessons.length; i < len; i++) {
       if (i % 2 == 0) {
-        add_lessons_lessons_card_mobile_des1(
+        add_lessons_lessons_card_mobile_des2(
           lessons[i][2],
           lessons[i][3],
           lessons[i][4],
@@ -681,10 +679,25 @@ function getAll() {
       enroll();
       enroll_d();
 
-      // trans.style.display = "flex";
-      // trans2.style.display = "flex";
-      // // trans3.style.display = "block";
-      // trans4.style.display = "flex";
+      //adding lessons for first course in list
+
+      if (Object.keys(dict).length > 0) {
+        var course_name_text = document.getElementById(
+          "choose_course_to_view_lessons"
+        );
+
+        var choose_course_to_view_lessons_desktop = document.getElementById(
+          "choose_course_to_view_lessons_desktop"
+        );
+        let firstKey = Object.keys(dict)[0];
+        var list = dict[firstKey];
+        search_list_spare = list;
+        addLessons(search_list_spare);
+        addLessons_mobiel(search_list_spare);
+        course_name_text.textContent = "#" + firstKey;
+        choose_course_to_view_lessons_desktop.textContent = "#" + firstKey;
+      }
+
       logo.style.display = "none";
       trans4.style.display = "flex";
       trans.style.display = "flex";
