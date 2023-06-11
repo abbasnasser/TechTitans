@@ -414,8 +414,8 @@ body {
     margin-right: 5%;
   }
   .txtt {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: -10px;
+    padding-right: 15%;
   }
 }
 @media only screen and (min-width: 899px) {
