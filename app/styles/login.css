@@ -1,0 +1,138 @@
+body {
+  margin: 0px;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  /* border: 3px solid #f1f1f1; */
+  max-width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.space {
+  height: 10px;
+}
+/* textfields ----------------- */
+
+.textfield {
+  padding-left: 20px;
+  width: 100%;
+  border: 1px solid #e64aff;
+  height: 50px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+}
+input[type="text"],
+input[type="password"] {
+  border-style: none;
+  width: 83%;
+  font-size: 16px;
+  display: inline-block;
+  outline-color: transparent;
+  height: 40px;
+}
+.textfield_icon {
+  width: 8%;
+  background-color: transparent;
+}
+
+/* textfields ends ----------------- */
+.btn_holder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #e64aff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  border-radius: 20px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 50%;
+  /* border-radius: 50%; */
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+.rememberme {
+  background-color: #e64aff;
+}
+input[type="text"]:focus {
+  border: 0px solid transparent;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+.option {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  background-color: transparent;
+}
+.customcheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #e64aff;
+  border-radius: 4px;
+}
+.option input:checked ~ .customcheckbox {
+  background-color: #e64aff;
+}
+.customcheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.option input:checked ~ .customcheckbox:after {
+  display: block;
+}
+.option .customcheckbox:after {
+  left: 5px;
+  bottom: 3px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

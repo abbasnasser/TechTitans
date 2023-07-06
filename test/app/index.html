@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+    <!-- <link rel="manifest" href="./manifest.json" /> -->
+  </head>
+  <body>
+    <div class="main">
+      <form action="../phps/login.php" method="post">
+        <div class="imgcontainer">
+          <img src="../assets/landing.jpg" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="textfield">
+          <input type="text" placeholder="User ID" name="userid" />
+          <img
+            src="../assets/user.png"
+            class="textfield_icon"
+            alt=""
+            srcset="" />
+        </div>
+        <div class="space"></div>
+        <div class="textfield">
+          <input type="password" placeholder="Password" name="password" />
+          <img
+            src="../assets/password.png"
+            class="textfield_icon"
+            alt=""
+            srcset="" />
+        </div>
+
+        <div class="btn_holder"><button type="submit">Login</button></div>
+
+        <label class="option"
+          >Remember Me
+          <input type="checkbox" />
+          <span class="customcheckbox"></span>
+        </label>
+      </form>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

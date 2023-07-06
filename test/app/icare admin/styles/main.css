@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  background-color: rgba(255, 243, 243, 0.357);
+  height: 100vh;
+  /* position: absolute;
+  z-index: 4; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.loading {
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  position: fixed;
+}
+.bodycontainer {
+  width: 90%;
+  margin: 20px;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  height: 120%;
+}

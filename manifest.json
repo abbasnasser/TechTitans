@@ -1,0 +1,23 @@
+{
+    "name": "Icare",
+    "short_name": "Icare",
+    "start_url": "/webapp/index.html",
+    "categories": [
+        "productivity",
+        "health",
+        "patients",
+        "managment"
+    ],
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "scope": "/",
+    "description": "A collection of useful cross-browser DevTools tips",
+    "icons": [
+        {
+            "src": "/assets/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

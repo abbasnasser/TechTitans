@@ -1,260 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="google-site-verification" content="AIvLok7W-nKZlYhaNsNgSzXUF_udHol-Hz63rA5QeJk" />
-     <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Titans</title>
-    <link rel="stylesheet" href="./fonts.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="prefetch" href="./assets//jobs.png" />
-    <link rel="prefetch" href="./assets/mobile.png" />
-    <link rel="prefetch" href="./assets/web.png" />
-    <link rel="prefetch" href="./assets/desktop.png" />
+    <title>Icare Tech</title>
+
+    <!-- test -->
+    <meta
+      content="Icare Tech is your best choice for managing you patients"
+      name="description" />
+    <meta content="Icare Tech" property="og:title" />
+    <meta content="test" property="twitter:title" />
+    <!-- <meta
+      content="SEF bootcamps train aspiring programmers to become job-ready, equipping them with the critical skills they need to get hired in the tech industry."
+      property="twitter:description" /> -->
+    <!-- test end -->
+    <link rel="stylesheet" href="./landing css/style.css" />
+    <link rel="stylesheet" href="./landing css/section_two_Home.css" />
+    <link rel="stylesheet" href="./landing css/about_section.css" />
+    <link rel="stylesheet" href="./landing css/getstarted.css" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
   </head>
-  <body id="b">
-    <div style="display: none" class="menues" id="menus">
-      <a href="./my account/myaccount.html" style="text-decoration: none">
-        <p class="menu_items">My Account</p></a
-      >
-      <a href="#cont2" style="text-decoration: none">
-        <p class="menu_items">SDLC</p></a
-      >
-      <a href="#cont5" style="text-decoration: none">
-        <p class="menu_items">Courses</p></a
-      >
-      <a href="#contactus" style="text-decoration: none">
-        <p class="menu_items">Contact us</p></a
-      >
-      <a href="#faqs" style="text-decoration: none">
-        <p class="menu_items">FAQs</p></a
-      >
-    </div>
-    <!-- --------------------nav bar----------------- -->
-    <div id="nav_bar" class="nav_bar">
-      <a style="text-decoration: none" href="">
-        <p class="title">Tech Titans</p></a
-      >
-      <a id="mnu" style="text-decoration: none">
+
+  <body>
+    <header class="header">
+      <a href="#intro_section"
+        ><div class="logo_container" href="#intro_section">
+          <img src="./assets/logo.png" alt="" class="logo" /></div
+      ></a>
+
+      <div class="menu">
+        <div class="items">
+          <a
+            href="./login.html"
+            style="text-decoration: none; text-decoration: none">
+            <div class="login_button">login</div></a
+          >
+        </div>
+        <a href="#about" style="text-decoration: none; text-decoration: none">
+          <div class="items">About</div></a
+        >
+        <a href="#about" style="text-decoration: none; text-decoration: none">
+          <div class="items">Install</div></a
+        >
+
+        <a
+          href="#products_section"
+          style="text-decoration: none; text-decoration: none">
+          <div class="items">Products</div></a
+        >
+        <a
+          href="#getstartedsection"
+          style="text-decoration: none; text-decoration: none">
+          <div class="items">Get Started</div></a
+        >
+      </div>
+      <div class="menu_icon">
         <img
-          class="menu"
-          style="width: 50px"
+          class="menu_width"
+          id="menu"
           src="./assets/menu.png"
           alt=""
           srcset="" />
-      </a>
-    </div>
-    <!-- end of nav bar -->
-    <!-- --------------------------------------------- -->
-    <div id="cor1">
-      <!-- ---------------------intro----------------------- -->
+      </div>
+      <!-- mobile menu -->
+      <div id="contmax" class="contmax">
+        <div class="menu_icollapsed_items" id="menu_items">
+          <a href="#getstartedsection" style="text-decoration: none"
+            ><div class="menu_elements_collapsed">Get Started</div></a
+          >
+          <a href="#products_section" style="text-decoration: none"
+            ><div class="menu_elements_collapsed">Products</div></a
+          >
 
-      <div id="cont1" class="first_row">
-        <img
-          style="
-            width: 90%;
-            max-width: 400px;
-            min-width: 250px;
-            border-radius: 50px;
-            margin-bottom: 20px;
-          "
-          src="./assets/jobs.png"
-          alt="" />
-        <div class="txtt">
-          <p
-            id="tech_hello"
-            style="font-weight: 900"
-            class="animated_intro_title">
-            Tech-Titans@abbas:~$ Hello Titans!
+          <div class="menu_elements_collapsed">Install</div>
+          <div class="menu_elements_collapsed">About</div>
+          <a href="./login.html" style="text-decoration: none"
+            ><div class="menu_elements_collapsed">Login</div></a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- intro section get started -->
+    <section class="intro" id="intro_section">
+      <div class="left_container">
+        <div>
+          <h1 class="title">ICARE TECHNOLOGY</h1>
+          <p class="decription">
+            Explore our range of healthcare-specific solutions tailored to meet
+            your unique needs.lorem Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Recusandae ea sint, illum asperiores natus ?
           </p>
-          <p
-            class="data2"
-            style="
-              width: 520px;
-              min-width: 200px;
-              max-width: 320px;
-              font-size: 18px;
-            ">
-            # i am here to help you start your journey in coding and teach you
-            some advanced skills to help you easify the process from planning a
-            project reaching the last phase of SDLC <br />
-            <br />
-            # Note: kindly signup for new account so you can enroll in the
-            courses and view your education dashboard and get access to your
-            course plan
-          </p>
+          <div class="button_container">
+            <a href="#getstartedsection" class="getstartedbutton"
+              >Get Started</a
+            >
+            <button id="install" class="login_button_in_page">Install</button>
+          </div>
         </div>
       </div>
 
-      <!-- cont2 -->
-      <div class="second_row">
-        <div class="box1">
-          <div id="soft_dev" class="cont2">
-            <p class="SDLC">> What is software development?</p>
+      <div class="right_container">
+        <img src="./assets/landing.jpg" alt="" class="landing_image" />
+      </div>
+    </section>
+    <section class="getstartedsection" id="getstartedsection">
+      <div class="getstarted" id="getstarted">
+        <div class="getstarted_description">
+          <div class="decriptionbox">
+            <h4 class="question">What is Icare ?</h4>
+            <p class="answer">
+              Icare webapp is a health care network tool that targets
+              Doctors,Nurses,lab and patients family members.
+            </p>
+
+            <h4 class="question">How it works ?</h4>
+            <p class="answer">
+              It works by connecting all health care members in one place so
+              they can manage their patients efficiently.
+            </p>
+            <h4 class="question">Description:</h4>
+            <p class="answer">
+              It gives you the ability to create new patient accounts as an
+              admin and add,link other member accounts like nurses and doctors
+              to help manage the patient case quickly and in a more accurate
+              way.In addition,you can create a family portal account which helps
+              family monitor their patients case from phone.
+            </p>
           </div>
-
-          <div id="cont3" class="cont3">
-            <div class="softwareDev_define">
-              # software development is the process of conceiving, specifying,
-              designing, programming, documenting, testing, and bug fixing
-              involved in creating and maintaining applications, frameworks, or
-              other software components
-            </div>
-          </div>
-        </div>
-        <div class="box2">
-          <div class="cont2_holder">
-            <div id="cont2" class="cont2">
-              <p class="SDLC">
-                > What is software development life cycle (SDLC)?
-              </p>
-            </div>
-
-            <div id="cont3" class="cont3">
-              <div class="sdlc_content">
-                # its a term that reflects the phases of managing a full project
-                from the starting point till the end
-              </div>
-            </div>
-
-            <div id="cont4" class="cont4">
-              <ul class="lst" style="list-style-type: none">
-                <li>> Planning and analysis</li>
-                <li>> Design</li>
-                <li>> Development</li>
-                <li>> Testing</li>
-                <li>> Deployment</li>
-                <li>> Maintenance</li>
+          <div class="feature_box">
+            <h4 class="question">Features</h4>
+            <div class="answer">
+              <ul>
+                <li>Create New Patient Account</li>
+                <li>Create New Sub Nurses Account</li>
+                <li>Create New Family Account</li>
+                <li>Link Doctors Accounts To Patient Account</li>
+                <li>Manage Patient Vitals,Medications,Procedures</li>
+                <li>Share Record With Doctors</li>
+                <li>
+                  Doctors By Their Own Account can order new medications and
+                  view patient status
+                </li>
+                <li>Admin can Scheduale team members shifting</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div id="cont1" class="third_row">
-        <div class="courses">
-          <!-- ----------------------------------------------- -->
-          <div id="cont5" class="cont5">
-            <p class="Courses_title">> Courses</p>
-          </div>
-          <div id="cont6" class="cont6">
-            <div class="nav_bar_courses">
-              <p id="desktop_nav" class="nav_course_items">Desktop</p>
-              <p id="mobile_nav" class="nav_course_items">Mobile</p>
-              <p id="web_nav" class="nav_course_items">Web</p>
-            </div>
-          </div>
-
-          <div class="cont6">
-            <div class="container_major">
-              <img
-                id="image_Course"
-                style="width: 70%; margin-top: 40px"
-                alt="" />
-              <p
-                id="Course_description"
-                style="
-                  font-family: 'Source Sans Pro', sans-serif;
-                  font-size: 19px;
-                  font-weight: 300;
-                "></p>
-              <a
-                id="learn_more_link"
-                href=""
-                style="text-decoration: none; color: black">
-                <p
-                  style="
-                    margin-top: 30px;
-                    font-family: 'Source Sans Pro', sans-serif;
-                    font-size: 20px;
-                  ">
-                  Learn More >>
-                </p></a
-              >
-            </div>
-          </div>
+    <!-- producst section -->
+    <section class="products_section" id="products_section">
+      <div class="products_data_container" id="products_link">
+        <div class="title_holder_design">
+          <h2 class="Products_title">CHOOSE PRODUCT</h2>
+          <!-- <div class="spare"></div> -->
+          <div class="spare"></div>
         </div>
-        <div class="contact" id="contactus">
-          <!-- --------------------Faqs------------------ -->
-          <div
-            id="faqs"
-            class="box1"
-            style="background-color: transparent; margin-top: 0px">
-            <p
-              style="
-                font-family: 'Times New Roman', Times, serif;
-                font-weight: 900;
-                font-size: 18px;
-              ">
-              > Contact me
-              <a href="https://wa.me/71589944">
-                <img
-                  width="50px"
-                  src="./assets/wp.png"
-                  style="position: relative; top: 20px; left: 10px"
-                  alt=""
-              /></a>
-            </p>
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          ">
+          <div class="products">
+            <div id="p1" class="product_card">
+              <p class="product_title_name">ICARE Lite</p>
 
-            <div id="cont2" class="cont2">
-              <p class="faqs">> FAQs</p>
+              <p class="product_price_month">20$ / Month</p>
+              <img
+                src="./assets/landing.jpg"
+                style="width: 200px"
+                alt=""
+                srcset="" />
+              <div class="space"></div>
+              <ul class="featureslist">
+                <li>One Patient</li>
+                <li>Unlimited Storage</li>
+                <li>Unlimited Team members</li>
+                <li>Limited Admin Features</li>
+              </ul>
+              <button class="subscribe" onclick="sub()">Book A Demo</button>
             </div>
 
-            <div id="cont3" class="faq_q">
-              <div class="faqs_content" id="choose_course_Q">
-                > What to choose between web,desktop or mobile development?
-              </div>
-              <div id="faq_dilaog_choose_course_Q" class="faq_dialog_box">
-                # Go for web dev if you want some thing that is easy and fast to
-                learn and will fits all devices with lite performance and easy
-                usage
-                <br />
-                <br />
-                # Go for mobile if you have more time to learn and if you want
-                to build a specific app that run just on mobile phone
-                <br />
-                <br />
-                # Go for desktop if you want to learn about building computer
-                applications like managment systems ...
-              </div>
-              <div id="back_front_Q" class="faqs_content">
-                > What is the difference between front and backend dev?
-              </div>
-              <div id="faq_dilaog_back_end_front" class="faq_dialog_box">
-                # A front end developer is the guy that works on desiging and
-                building the user interface of an app.For example a login screen
-                username and password fields .. <br />
-                <br />
-                # while a backend dev is responsible for building Api and
-                working with databases like SQl
-              </div>
+            <div id="p2" class="product_card">
+              <p class="product_title_name">ICARE Plus</p>
 
-              <div id="type_of_dev_Q" class="faqs_content">
-                > Which type of development is easier?
-              </div>
-              <div id="faq_dilaog_type_of_dev_Q" class="faq_dialog_box">
-                # Web dev is the simplest type of dev that you can learn quickly
-                but you should always practice to learn more and gain experience
-              </div>
+              <p class="product_price_month">30$ / Month</p>
+              <img
+                src="./assets/landing.jpg"
+                style="width: 200px"
+                alt=""
+                srcset="" />
+              <div class="space"></div>
+              <ul class="featureslist">
+                <li>One Patient</li>
+                <li>Unlimited Storage</li>
+                <li>Unlimited Team members</li>
+                <li>Limited Admin Features</li>
+              </ul>
+              <button class="subscribe" onclick="sub()">Book A Demo</button>
+            </div>
+            <div id="p2" class="product_card">
+              <p class="product_title_name">ICARE Pro</p>
 
-              <div id="flutter_Q" class="faqs_content">
-                > What is futter technology?
-              </div>
-              <div id="faq_dilaog_flutter_Q" class="faq_dialog_box">
-                # Flutter technology is a cross platform tool created by google
-                to help devs build desktop and mobile application faster so you
-                can use the same code for ios ,android and desktop
-              </div>
+              <p class="product_price_month">60$ / Month</p>
+              <img
+                src="./assets/landing.jpg"
+                style="width: 200px"
+                alt=""
+                srcset="" />
+              <div class="space"></div>
+              <ul class="featureslist">
+                <li>One Patient</li>
+                <li>Unlimited Storage</li>
+                <li>Unlimited Team members</li>
+                <li>Limited Admin Features</li>
+              </ul>
+              <button class="subscribe" onclick="sub()">Book A Demo</button>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section class="about" id="about"></section>
 
-      <!-- --------------------------------------------- -->
-    </div>
-
-    <script src="./index.js"></script>
+    <footer class="footer"></footer>
+    <!-- <button id="installApp">Install</button>
+    <button id="cl">Notify me!</button> -->
   </body>
+
+  <script src="./index.js"></script>
 </html>
