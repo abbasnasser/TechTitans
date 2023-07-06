@@ -63,7 +63,7 @@ function disableInAppInstallPrompt() {
 }
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js");
+  navigator.serviceWorker.register("/TechTitans/sw.js");
 }
 
 // var tt = document.getElementById("cl");
