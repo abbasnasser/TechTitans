@@ -1,7 +1,7 @@
 {
     "name": "Icare",
     "short_name": "Icare",
-    "start_url": "/webapp/index.html",
+    "start_url": "/TechTitans//webapp/index.html",
     "categories": [
         "productivity",
         "health",
